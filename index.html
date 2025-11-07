@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Flygskam</title>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1 class="card">Flyg mindre. Res smartare. Rädda planeten.</h1>
+      <h2>Beräkna ditt klimatavtryck för din flygresa.</h2>
+      <form action="#" class="form-grid">
+        <div class="selectbox field from">
+          <!-- Från flygplats -->
+          <label for="fran-flygplats-select">Från</label>
+          <select
+            name="fran-flygplats"
+            id="fran-flygplats-select"
+            required
+            autofocus
+          >
+            <option class="selected-option" value="">
+              Ange flygplats du flyger ifrån
+            </option>
+            <option value="arn-stockholm-arlanda">
+              ARN - Stockholm Arlanda
+            </option>
+            <option value="bma-stockholm-bromma">BMA - Stockholm Bromma</option>
+            <option value="got-goteborg-landvetter">
+              GOT - Göteborg Landvetter
+            </option>
+            <option value="mmx-malmo">MMX - Malmö</option>
+            <option value="nyo-nyköping-skavsta">NYO - Nyköping Skavsta</option>
+          </select>
+        </div>
+        <div class="selectbox field to">
+          <!-- Till flygplats -->
+          <label for="till-flygplats-select">Till</label>
+          <select name="till-flygplats" id="till-flygplats-select" required>
+            <option class="selected-option" value="">
+              Ange flygplats du flyger till
+            </option>
+            <option value="arn-stockholm-arlanda">
+              ARN - Stockholm Arlanda
+            </option>
+            <option value="bma-stockholm-bromma">BMA - Stockholm Bromma</option>
+            <option value="got-goteborg-landvetter">
+              GOT - Göteborg Landvetter
+            </option>
+            <option value="mmx-malmo">MMX - Malmö</option>
+            <option value="nyo-nyköping-skavsta">NYO - Nyköping Skavsta</option>
+          </select>
+        </div>
+        <!-- Resultat box -->
+        <div class="field result">
+          <label for="result">Resultat</label>
+          <textarea
+            name="result"
+            id="result"
+            placeholder="Här visas beräkningen"
+            readonly
+          ></textarea>
+        </div>
+        <!-- Submit knapp -->
+        <input type="submit" value="Beräkna" />
+      </form>
+    </main>
+  </body>
+</html>

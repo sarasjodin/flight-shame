@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wrap {
+  max-width: 850px;
+  padding: 40px;
+}
+
+.card {
+  background-color: rgb(219, 143, 2);
+  border-radius: 12px;
+  padding: 10px 20px;
+}
+
+h1 {
+  color: white;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.815);
+}
+
+h2 {
+  color: white;
+  font-weight: normal;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+label {
+  color: white;
+  width: 30px;
+  height: 15px;
+  padding: 5px;
+}
+
+.selectbox {
+  margin: 10px 0;
+  max-width: 220px;
+}
+
+select {
+  padding: 8px;
+  font-size: 14px;
+  min-width: 230px;
+}
+
+.selected-option {
+  font-weight: bold;
+}
+
+input[type='submit'] {
+  padding: 12px;
+  width: 140px;
+  background-color: rgb(219, 143, 2);
+  color: white;
+  font-size: 16px;
+  font-kerning: normal;
+  font-weight: bold;
+  border-radius: 12px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.815);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  grid-column: 1;
+  justify-self: end;
+}
+
+.field.result textarea {
+  width: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  height: 150px;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  padding: 10px 15px;
+  margin: 0 0 15px 0;
+}
+
+.from,
+.to {
+  grid-column: 1;
+}
+
+.field.result {
+  grid-column: 1;
+  min-width: 230px;
+}
+
+@media (min-width: 600px) {
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .from {
+    grid-column: 1;
+  }
+  .to {
+    grid-column: 2;
+  }
+
+  .field.result {
+    grid-column: 1 / -1;
+  }
+
+  input[type='submit'] {
+    grid-column: 1 / -1;
+    justify-self: end;
+  }
+}
