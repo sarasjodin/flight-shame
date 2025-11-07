@@ -13,58 +13,31 @@
       <form action="#" class="form-grid">
         <div class="selectbox field from">
           <!-- Från flygplats -->
-          <label for="fran-flygplats-select">Från</label>
-          <select
-            name="fran-flygplats"
-            id="fran-flygplats-select"
-            required
-            autofocus
-          >
+          <label for="from-airport">Från</label>
+          <select name="from-airport" id="from-airport" required autofocus>
             <option class="selected-option" value="">
-              Ange flygplats du flyger ifrån
+              Välj flygplats du flyger från
             </option>
-            <option value="arn-stockholm-arlanda">
-              ARN - Stockholm Arlanda
-            </option>
-            <option value="bma-stockholm-bromma">BMA - Stockholm Bromma</option>
-            <option value="got-goteborg-landvetter">
-              GOT - Göteborg Landvetter
-            </option>
-            <option value="mmx-malmo">MMX - Malmö</option>
-            <option value="nyo-nyköping-skavsta">NYO - Nyköping Skavsta</option>
           </select>
         </div>
         <div class="selectbox field to">
           <!-- Till flygplats -->
-          <label for="till-flygplats-select">Till</label>
-          <select name="till-flygplats" id="till-flygplats-select" required>
+          <label for="to-airport">Till</label>
+          <select name="to-airport" id="to-airport" required>
             <option class="selected-option" value="">
-              Ange flygplats du flyger till
+              Välj flygplats du flyger till
             </option>
-            <option value="arn-stockholm-arlanda">
-              ARN - Stockholm Arlanda
-            </option>
-            <option value="bma-stockholm-bromma">BMA - Stockholm Bromma</option>
-            <option value="got-goteborg-landvetter">
-              GOT - Göteborg Landvetter
-            </option>
-            <option value="mmx-malmo">MMX - Malmö</option>
-            <option value="nyo-nyköping-skavsta">NYO - Nyköping Skavsta</option>
           </select>
         </div>
         <!-- Resultat box -->
         <div class="field result">
           <label for="result">Resultat</label>
-          <textarea
-            name="result"
-            id="result"
-            placeholder="Här visas beräkningen"
-            readonly
-          ></textarea>
+          <div id="result" class="result-box"></div>
         </div>
         <!-- Submit knapp -->
-        <input type="submit" value="Beräkna" />
+        <input type="submit" value="Beräkna" id="btn-calculate" />
       </form>
     </main>
+    <script type="module" src="src/script.js"></script>
   </body>
 </html>
