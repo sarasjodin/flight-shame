@@ -1,3 +1,14 @@
+# My "flight-shame" app
+
+<a href="https://flight-shame.netlify.app/" target="_blank" rel="noopener noreferrer">
+  Open Live Demo on Netlify
+  </a> <br><br>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c00d9177-3b47-4ffc-9aa4-af8ececd6731/deploy-status)](https://app.netlify.com/projects/flight-shame/deploys)<br><br>
+
+<img width="auto" height="auto" alt="image" src="https://github.com/user-attachments/assets/6c5ed4f1-5412-40e8-9833-2f224efa3987" />
+
+
 ## How to Run this project locally
 
 This local project uses a serverless Netlify Function to access the Climatiq API https://www.climatiq.io/
