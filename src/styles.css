@@ -12,6 +12,7 @@ body {
 .wrap {
   max-width: 850px;
   padding: 40px;
+  margin: 0 auto;
 }
 
 h1 {
