@@ -8,10 +8,33 @@
 
 <img width="auto" height="auto" alt="image" src="https://github.com/user-attachments/assets/6c5ed4f1-5412-40e8-9833-2f224efa3987" />
 
+## Flight Shame – Calculate your flight’s CO₂ emissions
 
-## How to Run this project locally
+- Flight Shame is a simple educational web app that estimates the carbon footprint of flights between airports.
+- It uses the Climatiq API for emission data and a Netlify serverless function to keep the API key secure.
 
-This local project uses a serverless Netlify Function to access the Climatiq API https://www.climatiq.io/
+## How it works
+
+- Select departure and destination airports
+- The app calculates the flight distance using the Haversine formula
+- A serverless Netlify function sends that distance to the Climatiq API
+- The CO₂ emission estimate is returned and displayed in the UI
+
+## Environment Setup
+
+- The Climatiq API key is stored securely in a .env file (ignored by Git).
+- When deployed to Netlify, the same key is added under:
+- Site Settings, Environment Variables, CLIMATIQ_API_KEY
+- This ensures that the API key never appears in client-side code.
+
+## Tech stack
+
+- Vanilla JavaScript
+- Netlify Functions
+- fetches environmental data with `Climatiq API`
+- fetches json data (airport information - a `GitHub gist`)
+- HTML
+- CSS
 
 ### Requirements
 
