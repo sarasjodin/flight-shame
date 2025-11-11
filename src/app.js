@@ -1,6 +1,9 @@
 import { distanceReport } from './geo.js';
 import { messageBox } from './components/messageComponent.js';
-import { getAirportsFromUrl } from './airportClient.js';
+import {
+  getAirportsFromUrl,
+  getAirportsFromLocalJson
+} from './airportClient.js';
 import { estimateEmissions } from './apiClimatiqClient.js';
 
 const selectFrom = document.getElementById('from-airport');
@@ -11,10 +14,16 @@ const resultBox = document.getElementById('result');
 let airports = [];
 try {
   airports = await getAirportsFromUrl();
-} catch (err) {
-  resultBox.append(messageBox(err.message, 'error'));
-  btn.disabled = true;
-  throw err;
+  console.log('Loaded airports from remote gist.');
+} catch (error) {
+  console.warn('Remote fetch failed, trying local JSON...', error);
+  try {
+    airports = await getAirportsFromLocalJson();
+    console.log('Loaded airports from local file.');
+  } catch (error) {
+    console.error('Local file airports fetch failed:', error);
+    throw error;
+  }
 }
 
 const sortedAirports = [...airports].sort((a, b) =>
